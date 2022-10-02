@@ -1,5 +1,5 @@
 {% set name = "ctc-segmentation" %}
-{% set version = "1.7.1" %}
+{% set version = "1.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ctc_segmentation-{{ version }}.tar.gz
-  sha256: 17c3171fb7a7bbfcfacc10313398dbd761a31d3f13d3c5ea7d567e7f375f0223
+  sha256: 60b4b99820fd20c24ddd63caebdf17aa33f472c9667fe727cced1951e777bfa6
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
