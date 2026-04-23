@@ -6,16 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ctc_segmentation-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ctc_segmentation-{{ version }}.tar.gz
   sha256: 19d383ea5f22438ebb1699d72b22078b63f351a33fa50bedb19c14077ba6a116
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - numpy
     - pip
